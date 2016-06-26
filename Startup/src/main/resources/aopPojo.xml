@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- 컨테이너가 초기화시, 컨테이너 내부의 빈에서  @Aspect를 찾아 자동으로 aop 설정을 한다. -->
+	<aop:aspectj-autoproxy/>
+
+	<bean id="exeTimeAspect" class="com.kosb.aspect.ExTimeAspect2" >
+	</bean>
+	<bean id="cacheAspect" class="com.kosb.aspect.CacheAspect" >
+	</bean>
+	
+
+	
+	
+	<bean id="impeCal" class="com.kosb.chap2.ImpeCalculator">
+	</bean>
+	
+	
+
+
+</beans>
